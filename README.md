@@ -81,6 +81,16 @@ src
 ├── App.css
 ├── index.css
 └── main.jsx
+root
+│
+├── public
+├── .gitignore
+├── eslint.config.js
+├── index.html
+├── package.json
+├── package-lock.json
+├── README.md
+└── vite.config.js
 ```
 
 ---
