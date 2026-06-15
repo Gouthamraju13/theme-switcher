@@ -51,39 +51,40 @@ A modern React Theme Switcher built using the Context API. The application provi
 ## 📂 Project Structure
 
 ```text
-src
-│
-├── assets
-│
-├── components
-│   ├── MemoizedPanel
-│   │   ├── MemoizedPanel.jsx
-│   │   └── MemoizedPanel.css
-│   │
-│   ├── SurfaceCard
-│   │   ├── SurfaceCard.jsx
-│   │   └── SurfaceCard.css
-│   │
-│   ├── ThemeStats
-│   │   ├── ThemeStats.jsx
-│   │   └── ThemeStats.css
-│   │
-│   └── ThemeSwitcher
-│       ├── ThemeSwitcher.jsx
-│       └── ThemeSwitcher.css
-│
-├── context
-│   ├── ThemeContext.jsx
-│   ├── ThemeProvider.jsx
-│   └── useTheme.js
-│
-├── App.jsx
-├── App.css
-├── index.css
-└── main.jsx
-root
+theme-switcher
 │
 ├── public
+│
+├── src
+│   ├── assets
+│   │
+│   ├── components
+│   │   ├── MemoizedPanel
+│   │   │   ├── MemoizedPanel.jsx
+│   │   │   └── MemoizedPanel.css
+│   │   │
+│   │   ├── SurfaceCard
+│   │   │   ├── SurfaceCard.jsx
+│   │   │   └── SurfaceCard.css
+│   │   │
+│   │   ├── ThemeStats
+│   │   │   ├── ThemeStats.jsx
+│   │   │   └── ThemeStats.css
+│   │   │
+│   │   └── ThemeSwitcher
+│   │       ├── ThemeSwitcher.jsx
+│   │       └── ThemeSwitcher.css
+│   │
+│   ├── context
+│   │   ├── ThemeContext.jsx
+│   │   ├── ThemeProvider.jsx
+│   │   └── useTheme.js
+│   │
+│   ├── App.jsx
+│   ├── App.css
+│   ├── index.css
+│   └── main.jsx
+│
 ├── .gitignore
 ├── eslint.config.js
 ├── index.html
