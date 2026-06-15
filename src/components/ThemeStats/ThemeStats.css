@@ -1,0 +1,67 @@
+.theme-stats {
+  background: var(--color-surface);
+  border: 1.5px solid var(--color-border);
+  border-radius: 18px;
+  padding: 24px 28px;
+  box-shadow: var(--shadow-card);
+  transition: background-color 220ms ease, border-color 220ms ease;
+}
+
+.stats-heading {
+  font-family: 'Syne', sans-serif;
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--color-text-muted);
+  margin-bottom: 16px;
+  transition: color 220ms ease;
+}
+
+.stats-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.stats-row {
+  display: grid;
+  grid-template-columns: 130px 1fr;
+  align-items: center;
+  gap: 12px;
+}
+
+.stats-key {
+  font-family: 'JetBrains Mono', 'Fira Code', monospace;
+  font-size: 0.78rem;
+  color: var(--color-text-muted);
+  transition: color 220ms ease;
+}
+
+.stats-val {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.stats-chip {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.78rem;
+  font-weight: 600;
+  background: var(--color-badge-bg);
+  color: var(--color-badge-text);
+  padding: 3px 10px;
+  border-radius: 999px;
+  transition: background-color 220ms ease, color 220ms ease;
+}
+
+.stats-chip.dark {
+  background: var(--color-accent-subtle);
+  color: var(--color-accent);
+}
+
+.stats-note {
+  font-size: 0.75rem;
+  color: var(--color-text-muted);
+  transition: color 220ms ease;
+}

@@ -1,0 +1,54 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Syne:wght@700;800&display=swap');
+
+:root {
+  --color-bg:             #eef0f7;
+  --color-surface:        #ffffff;
+  --color-border:         #e2e4f0;
+  --color-text-primary:   #0f1030;
+  --color-text-secondary: #5a5d7a;
+  --color-text-muted:     #9396b0;
+  --color-accent:         #6c47ff;
+  --color-accent-subtle:  #ede9ff;
+  --color-badge-bg:       #f0edff;
+  --color-badge-text:     #6c47ff;
+  --color-code-bg:        #edeef6;
+  --color-code-text:      #5a5d7a;
+  --shadow-card:          0 2px 12px rgba(15,16,48,0.07), 0 1px 3px rgba(15,16,48,0.04);
+  --shadow-card-hover:    0 6px 24px rgba(15,16,48,0.10);
+}
+
+.dark {
+  --color-bg:             #0b0c1a;
+  --color-surface:        #13152b;
+  --color-border:         #252847;
+  --color-text-primary:   #e8eaf6;
+  --color-text-secondary: #9396b8;
+  --color-text-muted:     #5a5d7a;
+  --color-accent:         #8b6fff;
+  --color-accent-subtle:  #1e1a40;
+  --color-badge-bg:       #1e1a40;
+  --color-badge-text:     #a78bfa;
+  --color-code-bg:        #1e2040;
+  --color-code-text:      #9396b8;
+  --shadow-card:          0 2px 12px rgba(0,0,0,0.4);
+  --shadow-card-hover:    0 6px 24px rgba(0,0,0,0.5);
+}
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  font-family: 'Inter', system-ui, sans-serif;
+  background-color: var(--color-bg);
+  color: var(--color-text-primary);
+  transition: background-color 220ms ease, color 220ms ease;
+  min-height: 100vh;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    transition-duration: 0.01ms !important;
+    animation-duration: 0.01ms !important;
+  }
+}

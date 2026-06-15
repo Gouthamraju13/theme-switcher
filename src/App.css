@@ -1,0 +1,48 @@
+.page {
+  max-width: 860px;
+  margin: 0 auto;
+  padding: 56px 24px 80px;
+  display: flex;
+  flex-direction: column;
+  gap: 48px;
+}
+
+.app-header {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+}
+
+
+.app-title {
+  font-family: 'Syne', sans-serif;
+  font-size: clamp(2rem, 5vw, 3rem);
+  font-weight: 800;
+  color: var(--color-text-primary);
+  letter-spacing: -0.02em;
+  line-height: 1.1;
+  transition: color 220ms ease;
+}
+
+.app-subtitle {
+  font-size: 0.85rem;
+  color: var(--color-text-muted);
+  transition: color 220ms ease;
+}
+
+.controls-section {
+  display: flex;
+  justify-content: center;
+}
+
+.cards-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+}
+
+@media (max-width: 480px) {
+  .page { padding: 36px 16px 60px; gap: 32px; }
+}

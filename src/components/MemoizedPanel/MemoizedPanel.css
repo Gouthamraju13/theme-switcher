@@ -1,0 +1,42 @@
+.memo-panel {
+  background: var(--color-surface);
+  border: 1.5px dashed var(--color-accent);
+  border-radius: 18px;
+  padding: 28px 32px;
+  box-shadow: var(--shadow-card);
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  transition: background-color 220ms ease, border-color 220ms ease,
+              box-shadow 220ms ease, transform 200ms ease;
+}
+
+.memo-panel:hover {
+  box-shadow: var(--shadow-card-hover);
+  transform: translateY(-2px);
+}
+
+.memo-title {
+  font-family: 'Syne', sans-serif;
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--color-text-primary);
+  transition: color 220ms ease;
+}
+
+.memo-body {
+  font-size: 0.875rem;
+  color: var(--color-text-secondary);
+  line-height: 1.7;
+  transition: color 220ms ease;
+}
+
+.render-count {
+  font-size: 0.75rem;
+  font-family: 'JetBrains Mono', monospace;
+  color: var(--color-text-muted);
+  margin-top: auto;
+  padding-top: 10px;
+  border-top: 1px solid var(--color-border);
+  transition: color 220ms ease, border-color 220ms ease;
+}
