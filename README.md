@@ -1,10 +1,10 @@
-# 🎨 Theme Switcher
+# 🎨 Theme-Switcher
 
 A modern React Theme Switcher built using the Context API. The application provides a global theming system with support for Light, Dark, and System themes while focusing on performance optimization, accessibility, and real-world user experience.
 
 ---
 
-## 🚀 Live Features
+## 🚀 Features
 
 ### Theme Management
 - Light Theme
@@ -34,22 +34,15 @@ A modern React Theme Switcher built using the Context API. The application provi
 - Proper ARIA labels
 - Clear visual indication of active theme
 - Smooth theme transitions
-- Respects user experience best practices
-
-### User Experience
-- No Flash Of Incorrect Theme (FOIT/FOUT)
-- Smooth visual transitions
-- Responsive layout
-- Clean and modern UI
 
 ---
 
 ## 🛠️ Tech Stack
 
-- React 19
+- React
 - Vite
-- React Context API
-- CSS Variables
+- Context API
+- CSS
 - Local Storage API
 - Match Media API
 
@@ -80,43 +73,64 @@ src
 │       └── ThemeSwitcher.css
 │
 ├── context
-│   └── ThemeContext.jsx
+│   ├── ThemeContext.jsx
+│   ├── ThemeProvider.jsx
+│   └── useTheme.js
 │
 ├── App.jsx
 ├── App.css
-├── main.jsx
-└── index.css
+├── index.css
+└── main.jsx
 ```
+
+---
+
+## 🏗️ Architecture
+
+### ThemeContext.jsx
+Creates the global Theme Context.
+
+### ThemeProvider.jsx
+Handles:
+- Theme state management
+- Theme persistence
+- System theme detection
+- Runtime system theme updates
+- Theme application to the document
+
+### useTheme.js
+Custom hook for consuming theme context.
+
+### Components
+
+#### ThemeSwitcher
+Provides controls for:
+- Light Theme
+- Dark Theme
+- System Theme
+- Reset to System Preference
+
+#### ThemeStats
+Displays current theme-related context values.
+
+#### SurfaceCard
+Reusable themed card component.
+
+#### MemoizedPanel
+Demonstrates performance optimization using `React.memo`.
 
 ---
 
 ## ⚙️ Installation
 
-### Clone Repository
-
 ```bash
 git clone https://github.com/Gouthamraju13/theme-switcher.git
-```
-
-### Navigate to Project
-
-```bash
 cd theme-switcher
-```
-
-### Install Dependencies
-
-```bash
 npm install
-```
-
-### Start Development Server
-
-```bash
 npm run dev
 ```
 
-Application runs at:
+Open:
 
 ```text
 http://localhost:5173
@@ -124,43 +138,9 @@ http://localhost:5173
 
 ---
 
-## 🧠 Context API Flow
-
-### Theme Context Stores
-
-```js
-{
-  mode,
-  resolvedTheme,
-  systemTheme,
-  setTheme,
-  resetToSystem
-}
-```
-
-### Theme Resolution Logic
-
-1. Check Local Storage for saved preference.
-2. If found, apply saved theme.
-3. Otherwise detect OS theme.
-4. Listen for system theme changes.
-5. Update UI only when user hasn't selected a custom theme.
-
----
-
 ## 💾 Persistence Strategy
 
-Theme preference is stored in:
-
-```js
-localStorage
-```
-
-Example:
-
-```js
-localStorage.setItem("theme", "dark")
-```
+Theme preferences are stored in Local Storage.
 
 Supported values:
 
@@ -174,63 +154,30 @@ system
 
 ## ⚡ Performance Optimizations
 
-### Memoized Context Value
-
-```js
-useMemo()
-```
-
-Prevents unnecessary object recreation.
-
-### Memoized Components
-
-```js
-React.memo()
-```
-
-Used for components that do not directly depend on theme state.
-
-### Selective Re-rendering
-
-Only theme-dependent components subscribe to Theme Context.
+- `useMemo` for context value memoization
+- `React.memo` for non-theme-dependent components
+- Selective context subscriptions
+- Reduced unnecessary re-renders
 
 ---
 
 ## 🎯 Edge Cases Handled
 
 - First-time users with no saved preference
-- Theme persistence across refreshes
+- Theme persistence across reloads
 - Runtime OS theme changes
 - User preference overriding system preference
 - Non-browser environment safety checks
 - No visual flicker during initial render
-- Prevention of unnecessary component re-renders
 
 ---
 
-## ♿ Accessibility Features
+## ♿ Accessibility
 
-- Semantic HTML
-- Keyboard navigable controls
+- Keyboard accessible controls
 - ARIA labels
-- Visible active state indicators
-- Smooth and intuitive interactions
-
----
-
-## 📸 Preview
-
-### Dark Theme
-
-- Global dark appearance
-- Theme statistics panel
-- Memoized component rendering demonstration
-- Context state visualization
-
-### Light Theme
-
-- Fully responsive light appearance
-- Same functionality with alternate color palette
+- Semantic HTML
+- Clear active-state indicators
 
 ---
 
@@ -238,10 +185,8 @@ Only theme-dependent components subscribe to Theme Context.
 
 - Additional custom themes
 - Theme animations
-- Unit and integration testing
-- Theme presets
-- User customization options
-- Reduced motion preference support
+- Unit and integration tests
+- Reduced motion support
 
 ---
 
@@ -255,4 +200,4 @@ GitHub: https://github.com/Gouthamraju13
 
 ## 📄 License
 
-This project is created for learning and technical assessment purposes.
+Created for learning and technical assessment purposes.
