@@ -1,4 +1,4 @@
-# 🎨 Chroma Theme Lab
+# 🎨 Theme Switcher
 
 A modern React Theme Switcher built using the Context API. The application provides a global theming system with support for Light, Dark, and System themes while focusing on performance optimization, accessibility, and real-world user experience.
 
