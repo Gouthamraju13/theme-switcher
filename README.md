@@ -205,8 +205,8 @@ system
 
 **Erram Goutham Raju**
 
-GitHub: https://github.com/Gouthamraju13
-Live Application:
+- GitHub: https://github.com/Gouthamraju13
+- Live Application:
 
 ---
 
